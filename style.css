@@ -87,8 +87,18 @@
 
 .upcoming-matches-right {
     flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
 }
 
+.card {
+    border: 1px solid rgb(232, 232, 232);
+    border-radius: 10px;
+}
+.card-body{
+    padding: 20px;
+}
 .card img {
     width: 100%;
     height: 175px;
@@ -105,4 +115,25 @@
     color: #161616;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+
+/* tab responsive */
+@media screen and (max-width: 992px) {
+    .upcoming-matches{
+        flex-direction: column;
+    }
+    .upcoming-matches-left {
+        flex-direction: row;
+        width: 100%;
+        background-color: transparent;
+
+    }
+    .upcoming-matches-left *{
+        flex: 1;
+    }
+    .upcoming-matches-left .btn {
+        border: 1px solid rgb( 232, 232, 232);
+    }
+
 }
